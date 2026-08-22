@@ -1,0 +1,7 @@
+{
+  "$schema": "https://baditaflorin.github.io/mesh-common/mesh-service.schema.json",
+  "id": "mesh-rating-board",
+  "category": "Wellbeing",
+  "subcategory": "Mindfulness & focus",
+  "useCases": ["retrospectives", "workshops", "pulse checks"]
+}
