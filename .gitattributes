@@ -1,0 +1,5 @@
+# Vite keeps indentation inside third-party template literals in generated
+# bundles. Treat the committed Pages bundle as machine output for whitespace
+# checks so release gates continue to protect authored source without a false
+# positive on those literals.
+docs/assets/*.js -whitespace
