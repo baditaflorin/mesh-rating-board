@@ -1,10 +1,10 @@
-# mesh-rating-board
+# Room Pulse
 
 [![pages](https://img.shields.io/badge/live-baditaflorin.github.io%2Fmesh-rating-board-d97706)](https://baditaflorin.github.io/mesh-rating-board/)
 [![version](https://img.shields.io/badge/version-0.1.0-blue)](https://github.com/baditaflorin/mesh-rating-board/blob/main/package.json)
 [![license](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 
-> A shared five-star room temperature check.
+> A shared, one-tap signal for reading the room together.
 
 **Live → https://baditaflorin.github.io/mesh-rating-board/**
 
@@ -14,11 +14,9 @@
 
 ---
 
-![screenshot](docs/screenshot.png)
-
 > Two peers, side-by-side, in the same room. Drop a `tests/demo/scenario.mjs`
 > exporting `default async (a, b) => …` and run `npm run demo` to regenerate
-> `docs/preview.png` plus `docs/demo-a.webm` / `docs/demo-b.webm` clips.
+> `docs/preview.png` plus `docs/demo.gif`.
 
 ![preview](docs/preview.png)
 
@@ -30,7 +28,7 @@ Read the principles → **https://baditaflorin.github.io/rootless-computing/prin
 
 ## Quickstart
 
-Open the live URL on two devices in the same room (set in ⚙ settings, or scan the room QR). Everything else is in-app.
+Open the live URL on two devices in the same room (set in **Settings**, or scan the room QR). Everything else is in-app.
 
 For local hacking:
 
@@ -63,12 +61,12 @@ The settings drawer lets the user override signaling and TURN endpoints. localSt
 
 If endpoints are blank or unreachable, the app falls back to STUN-only.
 
-## Version + commit on every screen
+## Product details
 
-The bottom-right footer on every screen of the live app shows:
+**Settings → About** keeps technical metadata available without putting it in the live decision surface:
 
 - `source` → this repo
-- `tip ♥` → PayPal
+- `support` → PayPal
 - `vX.Y.Z · <short-sha>` — version from `package.json` plus the build-time git commit
 
 ## Build & deploy
@@ -77,7 +75,7 @@ GitHub Pages serves the committed `docs/` directory on the `main` branch. There 
 
 ```bash
 npm run smoke                                    # build + sanity-check docs/
-bash ../mesh-common/scripts/screenshot-app.sh    # regenerate docs/screenshot.png
+npm run demo                                     # refresh the two-peer preview + GIF
 ```
 
 ## Privacy
